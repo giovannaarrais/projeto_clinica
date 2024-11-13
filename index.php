@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sistema de Controle Clínico</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="tools\bootstrap-5.3.3-dist\css\bootstrap.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -113,6 +113,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="tools\bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js"></script>
 </body>
 </html>
