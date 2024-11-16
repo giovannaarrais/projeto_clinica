@@ -2,14 +2,14 @@
 <form action="?page=salvar-consulta" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">
 
-	<div class="mb-3">
+	<!-- <div class="mb-3">
 		<label>Nome do Paciente</label>
 		<input type="text" name="paciente_id_paciente" class="form-control">
 	</div>
 	<div class="mb-3">
 		<label>Nome do Médico</label>
 		<input type="text" name="medico_id_medico" class="form-control">
-	</div>
+	</div> -->
 	<div class="mb-3">
 		<label>Data da Consulta</label>
 		<input type="date" name="data_consulta" class="form-control">
