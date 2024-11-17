@@ -50,10 +50,15 @@
 	        </li>
 	        
 	      </ul>
-	      <form class="d-flex" role="search">
-	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	        <button class="btn btn-outline-success" type="submit">Search</button>
+
+	      <form class="d-flex" role="search" id="pesquisar_palavra" method="POST">
+	        <input class="form-control me-2" type="search" placeholder="Pesquisar" onkeyup="carregar_palavra(this.value)" id="produto" aria-label="Search">
+
+			<span id="resultado_pesquisa"></span>
+
+	        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
 	      </form>
+
 	    </div>
 	  </div>
 	</nav>
@@ -112,6 +117,8 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="js/custom.js"></script>
 
 	<script type="text/javascript" src="tools\bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js"></script>
 </body>
