@@ -1,5 +1,4 @@
 <?php 
-
 include_once './config.php';
 
 // Obtém o valor de 'nome' passado na URL
@@ -32,8 +31,7 @@ if (!empty($nome_palavra)) {
     // Preparar a consulta
     $result_palavras = $conn->prepare($query_palavras);
 
-    // Verificar se a preparação foi bem-sucedida
-    if (!$result_palavras) {
+    if ($result_palavras === false) {
         $retorna = ['status' => false, 'msg' => 'Erro na preparação da consulta: ' . $conn->error];
         echo json_encode($retorna);
         exit;

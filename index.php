@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sistema de Controle Clínico</title>
 	<link rel="stylesheet" type="text/css" href="tools\bootstrap-5.3.3-dist\css\bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -52,9 +53,11 @@
 	      </ul>
 
 	      <form class="d-flex" role="search" id="pesquisar_palavra" method="POST">
-	        <input class="form-control me-2" type="search" placeholder="Pesquisar" onkeyup="carregar_palavra(this.value)" id="produto" aria-label="Search">
-
-			<span id="resultado_pesquisa"></span>
+	        <div class="d-flex flex-column container-pesquisa">
+				<input class="form-control input-pesquisa me-2" type="search" placeholder="Pesquisar" onkeyup="carregar_palavra(this.value)" id="produto" aria-label="Search">
+				
+							<span id="resultado_pesquisa"></span>
+			</div>
 
 	        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
 	      </form>
