@@ -1,17 +1,14 @@
 async function carregar_palavra(valor) {
     const resultadoPesq = document.querySelector('#resultado_pesquisa');
 
-    // Limpar resultados anteriores
-    resultadoPesq.innerHTML = '';
+    resultadoPesq.innerHTML += '';
 
-    // Só fazer a busca se o valor for maior ou igual a 3 caracteres
     if (valor.length >= 3) {
         try {
             const dados = await fetch('pesquisar_palavra.php?nome=' + valor);
             const resposta = await dados.json();
 
             if (resposta.status) {
-                // Se houver dados, monta a lista de resultados
                 let html = '';
                 resposta.data.forEach(item => {
                     html += `
@@ -24,7 +21,6 @@ async function carregar_palavra(valor) {
                 });
                 resultadoPesq.innerHTML = html;
             } else {
-                // Caso não haja resultados
                 resultadoPesq.innerHTML = `<p>${resposta.msg}</p>`;
             }
         } catch (error) {
@@ -41,15 +37,19 @@ async function carregar_palavra(valor) {
 function addClass(){
     let resultadoPesq = document.querySelector('#resultado_pesquisa');
     let containerPesq = document.querySelector('.container-pesquisa');
+    let inputPesq = document.querySelector('.input-pesquisa');
+    let itemResult = document.querySelectorAll('.result-item')
 
-    containerPesq.addEventListener('click', function() {
-        resultadoPesq.classList.add('activepesq');
+    inputPesq.addEventListener('click', function() {
+        resultadoPesq.classList.add('show');
+        containerPesq.classList.add('active-palavra');
+        
     });
 
-    // Remove a classe 'active' quando o campo perde o foco (clicando fora ou saindo do campo)
-    containerPesq.addEventListener('mouseout', function() {
-        resultadoPesq.classList.remove('activepesq');
-    });
+    // element.addEventListener('mouseout', function() {
+    //     resultadoPesq.classList.remove('activepesq');
+    // });
+
 }
 
 function init(){
